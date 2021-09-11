@@ -14,7 +14,7 @@ function healButton(){
     bs.unpressedOffsetX = offset;
     bs.checkedOffsetX = offset;
 
-    b.setDisabled(() => Vars.state.isCampaign() || !Vars.player.unit() || !Vars.player.unit().type);
+    b.setDisabled(() => !Vars.player.unit() || !Vars.player.unit().type);
     
     b.label(() => b.isDisabled() ? "[gray]Heal[]" : "[white]Heal[]").padLeft(0);
     
@@ -60,7 +60,7 @@ function invincibilityButton(){
     bs.unpressedOffsetX = offset;
     bs.checkedOffsetX = offset;
 
-    b.setDisabled(() => Vars.state.isCampaign() || !Vars.player.unit() || !Vars.player.unit().type);
+    b.setDisabled(() => !Vars.player.unit() || !Vars.player.unit().type);
     
     b.label(() => b.isDisabled() ? "[gray]Invincibility[]" : "[white]Invincibility[]").padLeft(0);
     
