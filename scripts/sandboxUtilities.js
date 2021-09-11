@@ -49,8 +49,6 @@ function addSandbox(t, mobile){
     if(!mobile){
         b.label(() => Vars.state.rules.infiniteResources && b.isDisabled() ? "[gray]Survival[]" : Vars.state.rules.infiniteResources && !b.isDisabled() ? "[white]Survival[]" : !Vars.state.rules.infiniteResources && b.isDisabled() ? "[gray]Sandbox[]" : "[white]Sandbox[]").padLeft(0);
     }
-
-    b.setDisabled(() => Vars.state.isCampaign());
     
     b.clicked(() => {
         toggleSandbox();
@@ -89,8 +87,6 @@ function addFillCore(t, mobile){
 
     let h5 = 0;
     let swap = true;
-
-    b.setDisabled(() => Vars.state.isCampaign());
     
     b.clicked(() => {
         if(swap) fillCore();
