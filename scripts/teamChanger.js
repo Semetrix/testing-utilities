@@ -51,7 +51,7 @@ function addMini(t, teamList, mobile){
     let bs = b.style;
     bs.disabled = Tex.whiteui.tint(0.625, 0, 0, 0.8);
     
-    b.setDisabled(() => Vars.state.isCampaign() || Vars.player.unit().type == UnitTypes.block);
+    b.setDisabled(() => Vars.player.unit().type == UnitTypes.block);
 
     if(mobile){
         b.label(() => (abbreList[teams.indexOf(vars.curTeam)]));
